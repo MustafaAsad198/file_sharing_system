@@ -7,7 +7,7 @@
 ### clone the repository
 
 ```
-git clone https://github.com/MustafaAsad198/vpm
+git clone https://github.com/MustafaAsad198/file_sharing_system
 ```
 
 ### install requirements

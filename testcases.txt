@@ -1,0 +1,17 @@
+Ops user:
+    Username:  Harish
+    Email:     harishaa827@gmail.com
+    Passwrd:   123h
+
+Client user:
+    Username:  mustafa
+    Email:     mustafaasadnew198@gmail.com
+    Passwrd:   123m
+
+
+
+ABOUT DEPLOYMENT:
+
+    There are a couple of web sites that allow deployment of web applications based on python django framework. Namely, PythonAnywhere.
+    I have already deployed few projects of mine there.
+    Or another way of doing is to buy the service for deploying applications.

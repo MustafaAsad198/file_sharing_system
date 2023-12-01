@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations User Upload</title>
+</head>
+<body>
+    <h1>Operations User Upload</h1>
+    <button style="float:right"><a href="{% url "ops-logout" user.username %}">Logout</a></button>
+    <form action="/ops-upload/{{user.username}}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+
+    
+</body>
+</html>

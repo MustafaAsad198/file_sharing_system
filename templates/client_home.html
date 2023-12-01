@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome, {{user.username}}</title>
+</head>
+<body>
+    <h1>Welcome, {{user.username}}!</h1>
+    <button style="float:right"><a href="{% url "client-logout" user.username %}">Logout</a></button>
+    <p>Thank you for signing up for our file-sharing service. You can now see and download files.</p>
+    <hr><br>
+    <div>
+        <h2>List of all files:</h2>
+        <ul>
+        {% for file in files %}
+        <li>
+            <p>{{file.file_name}}</p>
+            <span>type:{{file.file_type}}</span><span>Uploaded by: {{file.uploaded_by}} on {{file.upload_date}}
+            <form action="/download-file/{{file.id}}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Download">
+            </form>
+            </span>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+</body>
+</html>
